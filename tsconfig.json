@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "esnext",
+        "lib": ["es6", "dom"],
+        "importHelpers": true,
+        "sourceMap": true,
+        "jsx": "react",
+        "strict": true,
+        "strictPropertyInitialization": false,
+        "skipLibCheck": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+        "moduleResolution": "node",
+        "baseUrl": "./",
+        "paths": {
+            "~/*": ["src/*"]
+        },
+        "typeRoots": [
+            "./src/typings",
+            "node_modules/@types"
+        ],
+        "esModuleInterop": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true
+    }
+}

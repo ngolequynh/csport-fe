@@ -1,0 +1,110 @@
+.root {
+    backgroundColor: #ffffff;
+    width: inherit;
+}
+.body {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    border-radius: 2px;
+    position: relative;
+    background: none;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    border-top: 3px solid #85b0c9;
+}
+
+.panel-heading-no-title {
+    background: #ffffff;
+    position: relative;
+    padding: 7px 15px;
+    height: 30px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    box-sizing: border-box;
+}
+
+.icon-edit {
+    float: right;
+    height: 100%;
+}
+
+.panel-body {
+    padding: 15px 25px 25px;
+    background: #fff;
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 2px;
+}
+
+.avatar {
+    object-fit: cover;
+    position: relative;
+    text-align: center;
+    box-sizing: border-box;
+    img {
+        height: 200px;
+        width: 200px;
+        vertical-align: middle;
+        border: 2px solid rgb(100, 98, 98);
+        box-sizing: border-box;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+}
+
+.name {
+    text-align: center;
+    margin: 10px 0 10px;
+    text-rendering: optimizelegibility;
+}
+
+.description {
+    margin: 0 0 10px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.information {
+    margin-top: 20px !important;
+    box-sizing: border-box;
+    table {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+        background: transparent;
+        border-spacing: 0;
+        border-collapse: collapse;
+        box-sizing: border-box;
+    }
+    table>tbody>tr:nth-child(odd)>td {
+        background: #f9f9f9;
+    }
+    table>tbody>tr>td {
+        padding: 8px 15px;
+        line-height: 1.42857143;
+        vertical-align: top;
+        border-top: 1px solid #ddd;
+        width: 60%;
+    }
+}
+
+.label {
+    display: inline;
+    padding: 0.2em 0.6em 0.3em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25em;
+    box-sizing: border-box;
+}
+
+@media only screen and (max-width: 300px) {
+    .scale {
+        width: 90%;
+    }
+}

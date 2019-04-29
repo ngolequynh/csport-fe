@@ -1,0 +1,48 @@
+.au-member-container {
+    border-bottom: 1px solid #f1f1f1;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px;
+}
+
+.au-member-avatar-wraper {
+    height: 50px;
+    width: 50px;
+}
+
+.au-member-info-wrapper {
+    display: flex;
+    flex: 1;
+    min-width: 50%;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 12px;
+    align-items: stretch;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+.au-member-info-wrapper h4,
+p {
+    margin: 5px;
+}
+
+.au-member-info-wrapper p {
+    font-size: 12px;
+    font-weight: 400;
+    color: #90949c;
+}
+
+.au-member-add {
+    display: flex;
+    align-items: center;
+}
+
+.au-member-add:hover {
+    transform: scale(1.2);
+}
+
+.member-short-info-image {
+    width: 100%;
+}

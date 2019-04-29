@@ -1,0 +1,44 @@
+.message-container {
+    padding: 4px;
+    margin: 4px 0;
+    width: 100%;
+}
+
+.message-container img {
+    margin: auto;
+    float: left;
+    max-width: 40px;
+    height: 40px;
+    width: 100%;
+    margin-right: 16px;
+    border-radius: 50%;
+}
+
+.user-name {
+    float: left;
+    color: #015c7f;
+}
+
+//CSS talk buble
+.talk-bubble {
+    display: inline-block;
+    background-color: aliceblue;
+}
+.round{
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+}
+
+/* talk bubble contents */
+.talktext{
+    padding: 1em;
+    text-align: left;
+    line-height: 1.5em;
+}
+
+/* remove webkit p margins */
+.talktext p{
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+}

@@ -1,0 +1,63 @@
+.modal-form {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: "Segoe UI", sans-serif;
+}
+.modal-form > div {
+    display: block;
+    margin: 10px 0;
+}
+.modal-form label {
+    font-size: 1.2rem !important;
+}
+.modal-form > input {
+    width: 100%;
+}
+.bottom-line {
+    border-bottom: darkgrey solid 1px;
+}
+.top-line {
+    border-top: darkgrey solid 1px;
+    padding-top: 10px;
+    width: 100%;
+    box-sizing: unset;
+}
+.top-line > button {
+    margin: 5px 10px;
+    align-content: flex-end;
+}
+.text-center {
+    text-align: center;
+}
+.icon-small {
+    font-size: 20px !important;
+    margin-right: 5px;
+}
+.custom-label {
+    font-size: 0.94rem !important;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    color: rgba(0, 0, 0, 0.54);
+    margin: 12px 0 -10px 0;
+}
+.custom-label-error {
+    font-size: 0.94rem !important;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    color: #f44336;
+    margin: 12px 0 -10px 0;
+}
+.error-type {
+    font-size: 0.8rem !important;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    margin: -8px 0 0 0;
+    color: #f44336;
+}
+.option-icon {
+    width: 6%;
+    margin-right: 16px;
+    margin-bottom: -5px;
+}
+@media screen and (max-width: 600px) {
+    .option-icon {
+        width: 12%;
+    }
+}

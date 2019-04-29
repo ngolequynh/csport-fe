@@ -1,0 +1,8 @@
+export enum statusConstants {
+    STATUS_NONE = "NONE",
+    STATUS_LOADING = "LOADING",
+    STATUS_LOADED = "LOADED",
+    STATUS_FAILED = "FAILED",
+    STATUS_UPDATING = "UPDATING",
+    STATUS_DELETING = "DELETING",
+}

@@ -1,0 +1,422 @@
+// Mobile container
+.tracker-container {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    background-color: #354051;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+// Container for progress bar and expansive button
+.progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+
+    // Expansive button, initially the red button we can see
+    &:before {
+        content: "";
+        position: absolute;
+        left: calc(50% - 30px);
+        bottom: 4%;
+        width: 60px;
+        height: 60px;
+        background-color: #ff6e6e;
+        border-radius: 100%;
+        transform: scale(1);
+        transition: 0.8s transform;
+    }
+}
+
+// Countdown counter, initially hidden
+.counter {
+    display: flex;
+    font-size: calc((11vh + 11vw) / 2);
+    font-family: "Roboto Mono", monospace;
+    color: #ffffff;
+    pointer-events: none;
+    opacity: 1;
+    z-index: 3;
+    transition: 0.5s opacity;
+}
+
+// Button to toggle countdown
+.button {
+    position: absolute;
+    left: calc(50% - 30px);
+    bottom: 4%;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    color: transparent;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-radius: 100%;
+    text-indent: -999px; // Hiding text
+    z-index: 2;
+    cursor: pointer;
+
+    // Gray button to stop countdown
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+        background-color: transparent;
+        transform: scale(0);
+        transition: 0.5s 0.5s transform, 0.5s 0.5s background-color;
+    }
+
+    // Element for the expansive shadow effect on click
+    &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+        opacity: 0;
+        box-shadow: inset 0 0 0 20px rgba(255, 255, 255, 1);
+        transition: 0s;
+        pointer-events: none;
+        z-index: -1;
+    }
+}
+
+// Styles for countdown running
+.tracker-container-running {
+    // Expand the red button to cover the container entirely
+    // Using the `easeInBack` easing to get a nice effect
+    .progress:before {
+        transform: scale(50);
+        transition: 0.8s transform cubic-bezier(0.6, -0.28, 0.735, 0.045); // easeInBack
+    }
+
+    // Show the counter
+    .counter {
+        opacity: 1;
+        transition: 1s opacity;
+    }
+
+    .button {
+        // Show the gray circle (stop button)
+        &:before {
+            background-color: #354051;
+            transform: scale(1);
+            transition: 0.5s 0.5s transform, 0.5s 0.5s background-color;
+        }
+
+        // Scale the element and reduce the shadow, getting the desired effect
+        &:after {
+            opacity: 1;
+            transform: scale(2.5);
+            box-shadow: inset 0 0 0 0 rgba(255, 255, 255, 0);
+            transition: all 0.8s, opacity 0.3s;
+        }
+    }
+}
+
+@keyframes rotate-loading {
+    0% {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes rotate-loading {
+    0% {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes rotate-loading {
+    0% {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-o-keyframes rotate-loading {
+    0% {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate-loading {
+    0% {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes rotate-loading {
+    0% {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes rotate-loading {
+    0% {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-o-keyframes rotate-loading {
+    0% {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@keyframes loading-text-opacity {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes loading-text-opacity {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes loading-text-opacity {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@-o-keyframes loading-text-opacity {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.loading-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading {
+    display: flex;
+    position: relative;
+    width: calc((50vh + 50vw) / 2);
+    height: 0;
+    padding-top: calc((50vh + 50vw) / 2);
+    border-radius: 50%;
+}
+
+.loading {
+    border: 2px solid transparent;
+    border-color: transparent #fff transparent #fff;
+    -moz-animation: rotate-loading 1.5s linear 0s infinite normal;
+    -moz-transform-origin: 50% 50%;
+    -o-animation: rotate-loading 1.5s linear 0s infinite normal;
+    -o-transform-origin: 50% 50%;
+    -webkit-animation: rotate-loading 1.5s linear 0s infinite normal;
+    -webkit-transform-origin: 50% 50%;
+    animation: rotate-loading 1.5s linear 0s infinite normal;
+    transform-origin: 50% 50%;
+}
+
+.loading-container {
+    .loading {
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -ms-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+#loading-text {
+    -moz-animation: loading-text-opacity 2s linear 0s infinite normal;
+    -o-animation: loading-text-opacity 2s linear 0s infinite normal;
+    -webkit-animation: loading-text-opacity 2s linear 0s infinite normal;
+    animation: loading-text-opacity 2s linear 0s infinite normal;
+    color: #ffffff;
+    font-family: "Helvetica Neue, " Helvetica ", " "arial";
+    font-size: calc((10vh + 10vw) / 2);
+    font-weight: bold;
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    top: 21%;
+}
+.distance {
+    display: flex;
+    width: 100%;
+    height: 50%;
+    justify-content: center;
+}
+
+.dialog {
+    padding: 0 !important;
+
+    overflow: hidden;
+}
+
+.buttonClose {
+    color: #ffffff !important;
+    height: 50px;
+    float: left;
+    z-index: 5;
+}

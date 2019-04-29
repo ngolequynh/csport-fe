@@ -1,0 +1,48 @@
+body.touch {
+    cursor: pointer;
+}
+
+.au-member-container {
+    border-bottom: 1px solid #f1f1f1;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px;
+}
+
+.au-member-avatar-wraper {
+    height: 50px;
+    width: 50px;
+}
+
+.au-member-info-wrapper {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 12px;
+    align-items: stretch;
+    text-align: left;
+}
+
+.au-member-info-wrapper h4,
+p {
+    margin: 5px;
+}
+
+.au-member-info-wrapper p {
+    font-size: 12px;
+    font-weight: 400;
+    color: #90949c;
+}
+
+.au-invite {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 50px;
+}
+
+.member-short-info-image {
+    width: 100%;
+}

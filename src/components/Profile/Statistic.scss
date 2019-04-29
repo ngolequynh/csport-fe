@@ -1,0 +1,133 @@
+//Setup
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+@mixin stagger-anim-delay($i, $initial-delay, $stagger-delay) {
+    @while $i > 0 {
+        &:nth-of-type(#{$i}) {
+            animation-delay: $initial-delay + $stagger-delay * $i;
+        }
+        $i: $i - 1;
+    }
+}
+
+.mybody {
+    margin-top: 20px;
+    font-family: "Open Sans", sans-serif;
+    color: #282828;
+}
+
+//Demo
+.charts {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    top: 0;
+    //margin-left: 20px;
+    z-index: 10;
+    //margin-right: 20px;
+    box-sizing: border-box;
+}
+
+.chart {
+    margin: 30px 0 0;
+
+    &:first-child {
+        margin: 0;
+    }
+}
+
+.chart-title {
+    display: block;
+    margin: 30px 10px 0 10px;
+    color: #5d6bbb;
+    font-weight: bold;
+    text-align: center;
+    opacity: 30;
+    font-size: larger;
+    animation: 2s anim-lightspeed-in ease forwards;
+
+    .chart-dev & {}
+    .chart-prod & {
+        animation-delay: 3.3s;
+    }
+    .chart-design & {
+        animation-delay: 4.5s;
+    }
+}
+
+.chart-horiz {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.chart-line {
+    box-sizing: border-box;
+}
+
+.chart-bar {
+    $border-rad: 4px;
+    height: 30px;
+    margin-bottom: 10px;
+
+    background: linear-gradient(to left, #680000, #61000000);
+    border-top-right-radius: $border-rad;
+    border-bottom-right-radius: $border-rad;
+    opacity: 0;
+
+    animation: 2s anim-lightspeed-in ease forwards;
+
+    .chart-dev & {
+        @include stagger-anim-delay(11, 0.5s, 0.2s);
+    }
+    .chart-prod & {
+        @include stagger-anim-delay(2, 3.8s, 0.2s);
+    }
+    .chart-design & {
+        @include stagger-anim-delay(3, 5s, 0.2s);
+    }
+}
+
+.chart-label {
+    line-height: 30px;
+    color: #0011ff;
+    font-size: larger;
+
+    animation: 2s anim-lightspeed-in ease forwards;
+}
+.stat {
+    padding-right: 10px;
+    line-height: 30px;
+    font-family: "Segoe UI", sans-serif;
+    font-size: large;
+    color: white;
+    position: relative;
+    animation: 2s anim-lightspeed-in ease forwards;
+    float: right;
+}
+
+.general {
+    padding-left: 10px;
+    font-family: "Segoe UI", sans-serif;
+    color: #015c7f;
+    animation: 2s anim-lightspeed-in ease forwards;
+    font-size: x-large;
+    padding-bottom: 20px;
+}
+.line-seperate-chart {
+    background: rgba(141, 177, 255, 0.64);
+    height: 2px;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+//Keyframes
+@keyframes anim-lightspeed-in {
+    0% {
+        transform: translateX(-200%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,28 @@
+.avatar {
+    margin: 10px;
+    position: relative;
+    box-sizing: border-box;
+}
+.avatar {
+    margin: 10px;
+    box-sizing: border-box;
+}
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.card {
+    border: 1px solid #eee;
+    box-shadow: 0 2px 3px #ccc;
+    padding: 4px;
+    margin: auto;
+    box-sizing: border-box;
+}
+.title {
+    padding: 5px 12px;
+    font-size: 14px;
+    background-color: #f6f7f9;
+    box-sizing: border-box;
+}

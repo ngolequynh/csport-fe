@@ -1,0 +1,27 @@
+.totalPaper {
+    background-color: #f5eeee73!important;
+    margin: fill!important;
+    background-blend-mode: lighten!important;
+    border: 0px solid #f5eeee73!important;
+    border-radius: 5px!important;
+    margin-bottom: 24px;
+}
+
+.typoName {
+    font-size: 20px!important;
+    color: #015c7f!important;
+    margin-left: 15px!important;
+}
+
+.typoHostName {
+    font-size: 12px!important;
+    color: #015c7f!important;
+    font-style: italic!important;
+}
+
+@media screen and (max-width: 380px) {
+    .teamInfoBody {
+        width: 90%;
+        margin: auto;
+    }
+}

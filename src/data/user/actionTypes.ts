@@ -1,0 +1,10 @@
+// define constant for redux
+export const USER_FETCH_REQUESTED = "USER_FETCH_REQUESTED";
+export const USER_FETCH_FULFILLED = "USER_FETCH_FULFILLED";
+export const USER_FETCH_REJECTED = "USER_FETCH_REJECTED";
+
+export default {
+    USER_FETCH_FULFILLED,
+    USER_FETCH_REQUESTED,
+    USER_FETCH_REJECTED,
+};

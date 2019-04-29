@@ -1,0 +1,49 @@
+.timer {
+    position: relative;
+    margin: -10px 0;
+    cursor: pointer;
+}
+.timer-ios {
+    position: relative;
+    margin: -10px 0 -23px 0;
+    cursor: pointer;
+}
+.act-tim-digit {
+    border: none;
+    border-right: 1px solid transparent;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 1rem;
+    outline: none;
+    width: 38px;
+    cursor: pointer;
+}
+.act-tim-sep {
+    display: inline-block;
+    font-size: 0.8rem;
+    outline: none;
+    padding-right: 5px;
+}
+.act-tim-digit.act-tim-cursor {
+    border-right: 1px solid black;
+}
+.act-tim-hid-input input {
+    height: 0;
+    left: 20px;
+    position: absolute;
+    opacity: 0;
+    top: 20px;
+    width: 0;
+    z-index: -2;
+}
+.act-tim-hid-input-ios input {
+    height: 0;
+    left: 20px;
+    opacity: 0;
+    margin-top: -20px;
+    width: 0;
+    z-index: -2;
+}
+.act-tim-hid-input-ios label,  .act-tim-hid-input label {
+    margin-top: -30px
+}
+
